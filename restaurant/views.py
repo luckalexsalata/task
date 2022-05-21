@@ -9,6 +9,7 @@ from .models import *
 from .serializers import *
 from users.models import User, Employee
 
+
 class RestaurantListView(generics.ListAPIView):
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
@@ -61,7 +62,6 @@ class UploadMenuAPIView(APIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def post(self, request):
-
         try:
             req = request.data.dict()
             todays_date = settings.CURRENT_DATE.date()
