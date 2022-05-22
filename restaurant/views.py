@@ -3,9 +3,6 @@ from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 from django.db.models import Q
 from django.conf import settings
-from django.http import Http404
-from rest_framework.authtoken.models import Token
-from .models import *
 from .serializers import *
 from users.models import User, Employee
 
